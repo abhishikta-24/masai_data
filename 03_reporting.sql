@@ -29,7 +29,7 @@ SELECT
     t.category,
     t.target_revenue_inr,
     r.total_revenue,
-    (r.total_revenue-t.target_revenue_inr)AS variance,
+    (r.total_revenue-t.target_revenue_inr) AS variance,
     CASE
         WHEN r.total_revenue>=t.target_revenue_inr THEN 'Above Target'
         WHEN (t.target_revenue_inr-r.total_revenue)<=(t.target_revenue_inr*0.15) THEN 'Below Target - Watch'
